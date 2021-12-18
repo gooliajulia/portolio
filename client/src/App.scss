@@ -1,0 +1,151 @@
+@use "sass:math";
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Fuzzy+Bubbles:wght@400;700&family=Gloria+Hallelujah&family=Gochi+Hand&family=Homemade+Apple&family=Kristi&family=Nothing+You+Could+Do&family=Oooh+Baby&family=Reenie+Beanie&family=Shadows+Into+Light&family=Yeseva+One&display=swap');
+
+/* font-family: 'Coming Soon', cursive;
+font-family: 'Fuzzy Bubbles', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Gochi Hand', cursive;
+font-family: 'Homemade Apple', cursive;
+font-family: 'Kristi', cursive;
+font-family: 'Nothing You Could Do', cursive;
+font-family: 'Oooh Baby', cursive;
+font-family: 'Reenie Beanie', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Yeseva One', cursive; */
+
+.App {
+  text-align: center;
+  background-color: rgba(255, 252, 247, 0.356);
+  width: 100vw;
+  height: 100vh;
+}
+
+p {
+  margin: 10px;
+  font-family: 'Yeseva One', cursive;
+  font-size: 30px;
+}
+
+p:hover {
+  font-size: 32px;
+  box-sizing: border-box;
+}
+
+p#projects {
+  color: rgba(224, 74, 48, 0.884);
+}
+
+p#me {
+  color: orange;
+}
+
+p#questions {
+  color: rgb(247, 205, 67);
+}
+
+p#resume {
+  color: rgb(0, 128, 128);
+}
+
+p#fun {
+  color: rgba(17, 1, 110, 0.836);
+}
+
+.nav {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.24);
+  height: 100vh;
+  width: 250px;
+  box-shadow: 0 0 5px rgb(226, 226, 226);
+  padding: 20px;
+  padding-top: 120px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background:transparent;
+  padding:0.5rem 0.5rem;
+  margin: 15px;
+  font-size:1rem;
+
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius:15px 255px;
+}
+
+button:hover{
+  box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+}
+
+button.lined.thin{
+  border:solid 1px #41403e9f;
+}
+
+div.lined.thin {
+
+  border:solid 1px #41403e9f;
+  width: 200px;
+  height: fit-content;
+  background:transparent;
+  padding:0.5rem 0.5rem;
+  margin: 20px auto;
+  font-size:1rem;
+
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius:15px 255px;
+}
+
+div.lined.thin:hover {
+  box-shadow: 2px 2px 10px -5px hsla(50,10%,5%,.3);
+}
+
+h4 {
+font-family: 'Reenie Beanie', cursive;
+font-family: 'Nothing You Could Do', cursive;
+font-size: 20px;
+}
+
+.night-sky {
+    position: absolute;
+    top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(rgb(24, 4, 109), black);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+$rand: random(100);
+
+.star {
+  color: white;
+  margin-top: 250px;
+  font-size: 40px;
+  text-shadow: 0px 0px 10px  cornsilk;
+  animation-name: drift;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes drift {
+  from {
+    font-size: 15px;
+    margin-left: 700px;
+    width: 400%
+  }
+  to {
+    margin-left: -500px;
+    width: -100%;
+    font-size: 20px;
+  }
+}
+
+

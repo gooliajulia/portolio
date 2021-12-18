@@ -1,38 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&family=Fuzzy+Bubbles:wght@400;700&family=Gloria+Hallelujah&family=Gochi+Hand&family=Homemade+Apple&family=Kristi&family=Nothing+You+Could+Do&family=Oooh+Baby&family=Reenie+Beanie&family=Shadows+Into+Light&family=Yeseva+One&display=swap");
+/* font-family: 'Coming Soon', cursive;
+font-family: 'Fuzzy Bubbles', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Gochi Hand', cursive;
+font-family: 'Homemade Apple', cursive;
+font-family: 'Kristi', cursive;
+font-family: 'Nothing You Could Do', cursive;
+font-family: 'Oooh Baby', cursive;
+font-family: 'Reenie Beanie', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Yeseva One', cursive; */
 .App {
   text-align: center;
+  /* background-color: rgba(255, 252, 247, 0.356); */
+  /* width: 100vw;
+  height: 100vh; */
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  margin: 10px;
+  font-family: "Yeseva One", cursive;
+  font-size: 30px;
+  color:white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p:hover {
+  font-size: 32px;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.nav {
+  position: fixed;
+  top: 23vh;
+  background-color: rgba(255, 255, 255, 0.24);
+  height: fit-content;
+  width: 250px;
+  box-shadow: 0 0 5px #e2e2e2;
+  padding: 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+}
+
+button {
+  background: transparent;
+  padding: 0.5rem 0.5rem;
+  margin: 15px;
+  font-size: 1rem;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+}
+
+button:hover {
+  box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+}
+
+button.lined.thin {
+  border: solid 1px #41403e9f;
+}
+
+div.lined.thin {
+  border: solid 1px #41403e9f;
+  width: 200px;
+  height: fit-content;
+  background: transparent;
+  padding: 0.5rem 0.5rem;
+  margin: 20px auto;
+  font-size: 1rem;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+}
+
+div.lined.thin:hover {
+  box-shadow: 2px 2px 10px -5px rgba(14, 14, 11, 0.3);
+}
+
+/* h4 {
+  font-family: "Reenie Beanie", cursive;
+  font-family: "Nothing You Could Do", cursive;
+  font-size: 20px;
+} */
+
+.night-sky-container {
+  height: 70vh;
+  width: 70vh;
+  /* margin-left: 100vw; */
+  margin-top: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 100px rgb(243, 195, 195);
+  border-style: solid;
+  border-width: 0px;
+  overflow: hidden;
+  box-shadow: border-box;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  z-index: 1;
+  background: radial-gradient(circle at 10% , black, rgb(12, 63, 105), white, thistle, white);
+  animation: look 5s ease-in-out infinite;
+}
+
+div.moon {
+  height: 50vh;
+  width: 50vh;
+  margin: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgb(243,195,195);
+  background: radial-gradient(rgb(247, 246, 244),rgb(235, 235, 235),rgb(202, 202, 202),rgb(201, 201, 201) );
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+p.moon {
+  color: rgba(31, 6, 27, 0.7)
+}
+
+
+
+
+.night-sky {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  height: 100vh;
+  width: 400vw;
+  background-image: linear-gradient(#2f003d, black);
+  /* border-radius: 50%; */
+  display: flex;
+  /* flex-direction: column;
+  justify-content: center; */
+  animation: drift 255s linear infinite;
+  z-index: -2;
+  object-fit: cover;
+  /* animation-name: drift;
+  animation-duration: 3s;
+  animation-iteration-count: infinite; */
+}
+
+.slow {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 400vw;
+  display: flex;
+  animation: drift 349s linear infinite;
+  z-index: -2;
+  object-fit: cover;
+
+}
+
+.star {
   color: white;
+  position: absolute;
+  font-size: 10px;
+  text-shadow: 0px 0px 10px cornsilk;
+  /* animation-name: drift;
+  animation-duration: 8s;
+  animation-iteration-count: infinite; */
 }
 
-.App-link {
-  color: #61dafb;
+.globe-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 300vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes look {
+  0% {
+    background: radial-gradient(circle at 10% , black, rgb(12, 63, 105), white, thistle, white);
+
   }
-  to {
-    transform: rotate(360deg);
+  10% {
+    background: radial-gradient(circle at 30% , black, rgb(12, 63, 105), white, thistle, white);
+  }
+  20% {
+    background: radial-gradient(circle at 10% , black, rgb(12, 63, 105), white, thistle, white);
+  }
+  30% {
+    background: radial-gradient(circle at 40% , black, rgb(12, 63, 105), white, thistle, white);
+  }
+  40% {
+    background: radial-gradient(circle at 70% , black, rgb(12, 63, 105), white, thistle, white);
+  }
+  50% {
+    background: radial-gradient(circle at 90% , black, rgb(12, 63, 105), white, thistle, white);
+  }
+  60% {
+    background: radial-gradient(circle at 50% , black, rgb(12, 63, 105), white, thistle, white);
+  }
+  70% {
+    background: radial-gradient(circle at 30% , black, rgb(12, 63, 105), white, thistle, white);
+  }
+  80% {
+    background: radial-gradient(circle at 10% , black, rgb(12, 63, 105), white, thistle, white);
   }
 }
+
+@keyframes drift {
+  0% {
+    left: -100vw;
+  }
+  50% {
+
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */
